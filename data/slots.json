@@ -1,0 +1,16 @@
+[
+  {
+    "SlotNumber": 1,
+    "TzSerialNumber": "A0 20 00 5C C5",
+    "CurrentPyKey": "13071023",
+    "IsEmpty": false,
+    "CurrentState": 0
+  },
+  {
+    "SlotNumber": 2,
+    "TzSerialNumber": "18 13 00 18 6D",
+    "CurrentPyKey": "13070870",
+    "IsEmpty": false,
+    "CurrentState": 0
+  }
+]

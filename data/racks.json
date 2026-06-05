@@ -1,0 +1,14 @@
+[
+  {
+    "Tag": "A01",
+    "LockId": "65-25070122",
+    "DisplayName": "Rack A01 - ISS Rack",
+    "Row": "Row A"
+  },
+  {
+    "Tag": "A02",
+    "LockId": "65-25110187",
+    "DisplayName": "Rack A02 - Test Rack",
+    "Row": "Row B"
+  }
+]

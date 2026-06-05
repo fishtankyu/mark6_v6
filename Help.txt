@@ -1,0 +1,44 @@
+To remove the admin functions in application 
+Remove all these files completly
+PinDialog.xaml
+PinDialog.xaml.cs
+AdminWindow.xaml
+AdminWindow.xaml.cs
+
+3 small code changes needed in the remaining files:
+MainWindow.xaml — remove the ⚙ button from the header:
+<!-- DELETE this entire Button block -->
+<Button x:Name="BtnAdmin"
+        Content="⚙"
+        ToolTip="Admin Portal"
+        Foreground="{StaticResource TextDim}"
+        Background="Transparent"
+        BorderThickness="0"
+        FontSize="18"
+        Cursor="Hand"
+        Padding="6,2"
+        Click="BtnAdmin_Click"/>
+
+MainWindow.xaml.cs — remove the handler:
+// DELETE this entire method
+private void BtnAdmin_Click(object s, RoutedEventArgs e)
+{
+    var pinWin = new PinDialog();
+    pinWin.Owner = this;
+    if (pinWin.ShowDialog() != true) return;
+    if (pinWin.EnteredPin != KioskSettings.AdminPin)
+    {
+        MessageBox.Show("Incorrect PIN.", "Access Denied",
+                        MessageBoxButton.OK, MessageBoxImage.Warning);
+        return;
+    }
+    var admin = new AdminWindow();
+    admin.Owner = this;
+    admin.ShowDialog();
+}
+
+AppConfig.cs — remove AdminPin (keep WebAdminPin and WebAdminPort):
+// DELETE this one line
+public const string AdminPin = "1234";
+
+

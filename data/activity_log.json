@@ -1,0 +1,687 @@
+[
+  {
+    "Timestamp": "2026-05-21 17:11:56",
+    "Category": "AdminAction",
+    "Message": "Updated user \u0027zeng yu\u0027 NRIC:023C | Racks: A01, A02 (unchanged)"
+  },
+  {
+    "Timestamp": "2026-05-21 17:11:01",
+    "Category": "AdminAction",
+    "Message": "Deleted user photo: \u0027zeng_yu.jpg\u0027"
+  },
+  {
+    "Timestamp": "2026-05-21 17:10:43",
+    "Category": "AdminAction",
+    "Message": "Deleted user \u0027Zeng Yu\u0027"
+  },
+  {
+    "Timestamp": "2026-05-21 17:08:46",
+    "Category": "AdminAction",
+    "Message": "Enrolled user photo: \u0027Zeng Yu\u0027"
+  },
+  {
+    "Timestamp": "2026-05-21 16:55:00",
+    "Category": "AdminAction",
+    "Message": "Enrolled escort photo: \u0027Zeng Yu\u0027"
+  },
+  {
+    "Timestamp": "2026-05-21 16:54:49",
+    "Category": "AdminAction",
+    "Message": "Enrolled user photo: \u0027Zeng Yu\u0027"
+  },
+  {
+    "Timestamp": "2026-05-21 16:54:15",
+    "Category": "AdminAction",
+    "Message": "Updated user \u0027Zeng Yu\u0027 NRIC:023C | Racks: A01, A02 (unchanged)"
+  },
+  {
+    "Timestamp": "2026-05-21 16:44:13",
+    "Category": "AdminAction",
+    "Message": "Enrolled user photo: \u0027Zeng Yu\u0027"
+  },
+  {
+    "Timestamp": "2026-05-21 16:43:26",
+    "Category": "AdminAction",
+    "Message": "Enrolled escort photo: \u0027Zeng Yu\u0027"
+  },
+  {
+    "Timestamp": "2026-05-20 09:23:52",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1, A02(65-25110187)x1 | 2 code(s) total"
+  },
+  {
+    "Timestamp": "2026-05-05 13:00:18",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1, A02(65-25110187)x1 | 2 code(s) total"
+  },
+  {
+    "Timestamp": "2026-05-05 12:57:15",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A02(65-25110187)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-14 16:24:50",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1, A02(65-25110187)x1 | 2 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-14 16:23:27",
+    "Category": "KeyDrawn",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 drew key for Rack A01 from Slot 1"
+  },
+  {
+    "Timestamp": "2026-04-14 16:23:17",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-14 16:21:26",
+    "Category": "KeyReturned",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 returned key for Rack A01 to Slot 1"
+  },
+  {
+    "Timestamp": "2026-04-14 16:20:45",
+    "Category": "KeyDrawn",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 drew key for Rack A01 from Slot 1"
+  },
+  {
+    "Timestamp": "2026-04-14 16:20:36",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-14 16:18:44",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-14 16:08:11",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-14 15:57:18",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-14 15:49:46",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Unknown\u0027 \u2192 User \u0027Unknown\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-14 15:40:31",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A02(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-14 15:31:37",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A02(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-14 15:31:09",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Unknown\u0027 \u2192 User \u0027Unknown\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-14 15:19:35",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-14 15:18:08",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-14 15:17:15",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-10 14:06:44",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-10 13:37:01",
+    "Category": "AdminAction",
+    "Message": "Deleted rack \u0027A03\u0027"
+  },
+  {
+    "Timestamp": "2026-04-10 10:45:52",
+    "Category": "AdminAction",
+    "Message": "Updated user \u0027Zeng Y\u0027 NRIC:023C | Racks: A01, A02 (unchanged)"
+  },
+  {
+    "Timestamp": "2026-04-10 10:45:41",
+    "Category": "AdminAction",
+    "Message": "Updated user \u0027Zeng Yu\u0027 NRIC:023C | Racks: A01 \u2192 A01, A02"
+  },
+  {
+    "Timestamp": "2026-04-10 10:43:13",
+    "Category": "AdminAction",
+    "Message": "Updated user \u0027Zeng Yu\u0027 NRIC:023C | Racks: A01, A02 (unchanged)"
+  },
+  {
+    "Timestamp": "2026-04-09 16:42:49",
+    "Category": "AdminAction",
+    "Message": "Updated user \u0027Zeng Yu\u0027 NRIC:023C"
+  },
+  {
+    "Timestamp": "2026-04-09 16:40:41",
+    "Category": "AdminAction",
+    "Message": "Updated user \u0027Zeng Yu\u0027 NRIC:023C"
+  },
+  {
+    "Timestamp": "2026-04-09 14:15:19",
+    "Category": "AdminAction",
+    "Message": "Updated user \u0027Zeng Yu\u0027 NRIC:023C"
+  },
+  {
+    "Timestamp": "2026-04-09 11:40:00",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 11:39:10",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 11:36:35",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 11:34:51",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 11:33:01",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 11:31:45",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 11:14:09",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 11:13:36",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 11:01:14",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 11:00:08",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 10:55:57",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 10:44:13",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 10:30:34",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 10:29:02",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 10:25:57",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 10:23:00",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 10:10:28",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 10:08:07",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 09:16:06",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 09:14:39",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 09:04:47",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-07 17:12:26",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-07 16:58:40",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-07 16:50:53",
+    "Category": "AdminAction",
+    "Message": "Enrolled user photo: \u0027Zeng Yu\u0027"
+  },
+  {
+    "Timestamp": "2026-04-07 16:50:24",
+    "Category": "AdminAction",
+    "Message": "Updated user \u0027Zeng Yu\u0027 NRIC:023C"
+  },
+  {
+    "Timestamp": "2026-04-07 16:43:51",
+    "Category": "AdminAction",
+    "Message": "Updated user \u0027John Tan\u0027"
+  },
+  {
+    "Timestamp": "2026-04-07 16:44:09",
+    "Category": "AdminAction",
+    "Message": "Saved rack \u0027A02\u0027 (Rack A02 - Test Rack, Lock: 65-25110187)"
+  },
+  {
+    "Timestamp": "2026-04-07 16:50:44",
+    "Category": "AdminAction",
+    "Message": "Deleted user photo: \u0027zeng_yu.jpg\u0027"
+  },
+  {
+    "Timestamp": "2026-04-07 16:51:25",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 11:40:21",
+    "Category": "AdminAction",
+    "Message": "Updated user \u0027Zeng Yu\u0027 NRIC:023C"
+  },
+  {
+    "Timestamp": "2026-04-09 11:40:48",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED), A02(FAILED), A03(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 11:41:24",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED), A02(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 11:42:22",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED), A02(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 11:43:13",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 11:44:00",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A02(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 11:44:41",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A02(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 11:45:10",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 11:51:24",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Unknown\u0027 \u2192 User \u0027Unknown\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 13:50:07",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A02(65-25110187)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 13:56:35",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A02(65-25110187)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 13:57:12",
+    "Category": "KeyDrawn",
+    "Message": "Escort \u0027Unknown\u0027 \u2192 User \u0027Unknown\u0027 drew key for Rack A02 from Slot 2"
+  },
+  {
+    "Timestamp": "2026-04-09 13:57:35",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 13:57:42",
+    "Category": "KeyDrawn",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 drew key for Rack A01 from Slot 1"
+  },
+  {
+    "Timestamp": "2026-04-09 13:58:42",
+    "Category": "KeyReturned",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 returned key for Rack A01 to Slot 1"
+  },
+  {
+    "Timestamp": "2026-04-09 13:59:32",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 13:59:37",
+    "Category": "KeyDrawn",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 drew key for Rack A01 from Slot 1"
+  },
+  {
+    "Timestamp": "2026-04-09 14:01:49",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A02(65-25110187)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 14:03:40",
+    "Category": "KeyReturned",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 returned key for Rack A01 to Slot 1"
+  },
+  {
+    "Timestamp": "2026-04-09 14:04:09",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 14:04:15",
+    "Category": "KeyDrawn",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 drew key for Rack A01 from Slot 1"
+  },
+  {
+    "Timestamp": "2026-04-09 14:16:08",
+    "Category": "AdminAction",
+    "Message": "Deleted user \u0027John Tan\u0027"
+  },
+  {
+    "Timestamp": "2026-04-09 14:22:24",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 14:23:10",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 14:23:52",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 14:28:47",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 14:28:53",
+    "Category": "KeyDrawn",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 drew key for Rack A01 from Slot 1"
+  },
+  {
+    "Timestamp": "2026-04-09 14:35:55",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 14:35:59",
+    "Category": "KeyDrawn",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 drew key for Rack A01 from Slot 1"
+  },
+  {
+    "Timestamp": "2026-04-09 14:36:18",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A02(65-25110187)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 14:36:21",
+    "Category": "KeyDrawn",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 drew key for Rack A02 from Slot 2"
+  },
+  {
+    "Timestamp": "2026-04-09 14:37:03",
+    "Category": "KeyReturned",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 returned key for Rack A02 to Slot 1"
+  },
+  {
+    "Timestamp": "2026-04-09 14:57:29",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 14:59:12",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 15:00:10",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 15:03:23",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Unknown\u0027 \u2192 User \u0027Unknown\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 15:06:02",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 15:06:29",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 15:07:10",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 15:14:08",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 15:17:30",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 15:21:14",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 15:24:01",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 15:31:13",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 15:37:05",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 15:40:19",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 15:56:06",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 16:18:44",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 16:29:15",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(FAILED) | 0 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 16:32:18",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 16:32:22",
+    "Category": "KeyDrawn",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 drew key for Rack A01 from Slot 1"
+  },
+  {
+    "Timestamp": "2026-04-09 16:32:45",
+    "Category": "KeyReturned",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 returned key for Rack A01 to Slot 1"
+  },
+  {
+    "Timestamp": "2026-04-09 16:34:24",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A01(65-25070122)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 16:34:29",
+    "Category": "KeyDrawn",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 drew key for Rack A01 from Slot 1"
+  },
+  {
+    "Timestamp": "2026-04-09 16:39:39",
+    "Category": "KeyReturned",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 returned key for Rack A01 to Slot 1"
+  },
+  {
+    "Timestamp": "2026-04-09 16:42:12",
+    "Category": "AdminAction",
+    "Message": "Updated user \u0027Zeng Yu\u0027 NRIC:023C"
+  },
+  {
+    "Timestamp": "2026-04-09 16:42:31",
+    "Category": "CodeGeneration",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 | A02(65-25110187)x1 | 1 code(s) total"
+  },
+  {
+    "Timestamp": "2026-04-09 16:42:35",
+    "Category": "KeyDrawn",
+    "Message": "Escort \u0027Zeng Yu\u0027 \u2192 User \u0027Zeng Yu\u0027 drew key for Rack A02 from Slot 2"
+  },
+  {
+    "Timestamp": "2026-04-10 10:42:57",
+    "Category": "AdminAction",
+    "Message": "Updated user \u0027Zeng Yu\u0027 NRIC:023C | Racks: A01, A02 (unchanged)"
+  },
+  {
+    "Timestamp": "2026-04-10 10:43:19",
+    "Category": "AdminAction",
+    "Message": "Updated user \u0027Zeng Yu\u0027 NRIC:023C | Racks: A01 (unchanged)"
+  },
+  {
+    "Timestamp": "2026-04-10 10:45:45",
+    "Category": "AdminAction",
+    "Message": "Updated user \u0027Zeng Yu\u0027 NRIC:023C | Racks: A01, A02 (unchanged)"
+  },
+  {
+    "Timestamp": "2026-04-10 10:46:02",
+    "Category": "AdminAction",
+    "Message": "Updated user \u0027Zeng Yu\u0027 NRIC:023C | Racks: A01, A02 (unchanged)"
+  },
+  {
+    "Timestamp": "2026-05-21 15:12:40",
+    "Category": "AdminAction",
+    "Message": "Enrolled escort photo: \u0027Zeng Yu\u0027"
+  },
+  {
+    "Timestamp": "2026-05-21 16:43:41",
+    "Category": "AdminAction",
+    "Message": "Added user \u0027Zeng Yu\u0027 NRIC:023C | Racks: A01, A02"
+  },
+  {
+    "Timestamp": "2026-05-21 16:46:57",
+    "Category": "AdminAction",
+    "Message": "Updated user \u0027Zeng Yu\u0027 NRIC:023C | Racks: A01, A02 (unchanged)"
+  },
+  {
+    "Timestamp": "2026-05-21 16:54:36",
+    "Category": "AdminAction",
+    "Message": "Deleted user photo: \u0027zeng_yu.jpg\u0027"
+  },
+  {
+    "Timestamp": "2026-05-21 16:54:52",
+    "Category": "AdminAction",
+    "Message": "Deleted escort photo: \u0027zeng_yu.jpg\u0027"
+  },
+  {
+    "Timestamp": "2026-05-21 17:08:30",
+    "Category": "AdminAction",
+    "Message": "Added user \u0027Zeng Yu\u0027 NRIC:023C | Racks: A01, A02"
+  },
+  {
+    "Timestamp": "2026-05-21 17:09:55",
+    "Category": "AdminAction",
+    "Message": "Updated user \u0027Zeng Yu\u0027 NRIC:023C | Racks: A01, A02 (unchanged)"
+  },
+  {
+    "Timestamp": "2026-05-21 17:10:50",
+    "Category": "AdminAction",
+    "Message": "Added user \u0027zeng yu\u0027 NRIC:023C | Racks: A01, A02"
+  },
+  {
+    "Timestamp": "2026-05-21 17:11:06",
+    "Category": "AdminAction",
+    "Message": "Enrolled user photo: \u0027zeng yu\u0027"
+  },
+  {
+    "Timestamp": "2026-05-21 17:17:23",
+    "Category": "AdminAction",
+    "Message": "Deleted escort photo: \u0027zeng_yu.jpg\u0027"
+  }
+]

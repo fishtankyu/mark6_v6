@@ -1,0 +1,717 @@
+<Window x:Class="PyConnectKiosk.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Admin Portal — ST Engineering"
+        Width="980" Height="720"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanResize"
+        Background="#F8F9FA">
+
+
+    <Window.Resources>
+        <SolidColorBrush x:Key="SteRed"   Color="#C8102E"/>
+        <SolidColorBrush x:Key="TextMain" Color="#111827"/>
+        <SolidColorBrush x:Key="TextDim"  Color="#6B7280"/>
+        <SolidColorBrush x:Key="Border1"  Color="#E5E7EB"/>
+        <Style x:Key="WatermarkBox" TargetType="TextBox">
+            <Setter Property="BorderBrush"              Value="#E5E7EB"/>
+            <Setter Property="BorderThickness"          Value="1"/>
+            <Setter Property="Padding"                  Value="8,6"/>
+            <Setter Property="FontSize"                 Value="13"/>
+            <Setter Property="Background"               Value="#FFFFFF"/>
+            <Setter Property="Foreground"               Value="#111827"/>
+            <Setter Property="VerticalContentAlignment" Value="Top"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="TextBox">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="4">
+                            <Grid>
+                                <TextBlock x:Name="Watermark"
+                                           Text="{TemplateBinding Tag}"
+                                           Foreground="#9CA3AF"
+                                           FontSize="{TemplateBinding FontSize}"
+                                           Margin="{TemplateBinding Padding}"
+                                           VerticalAlignment="Top"
+                                           IsHitTestVisible="False"
+                                           Visibility="Collapsed"/>
+                                <ScrollViewer x:Name="PART_ContentHost"
+                                              VerticalScrollBarVisibility="Auto"/>
+                            </Grid>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <MultiTrigger>
+                                <MultiTrigger.Conditions>
+                                    <Condition Property="Text"      Value=""/>
+                                    <Condition Property="IsFocused" Value="False"/>
+                                </MultiTrigger.Conditions>
+                                <Setter TargetName="Watermark" Property="Visibility" Value="Visible"/>
+                            </MultiTrigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="AdminBtn" TargetType="Button">
+            <Setter Property="Background"      Value="#C8102E"/>
+            <Setter Property="Foreground"      Value="#FFFFFF"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontFamily"      Value="Segoe UI Semibold"/>
+            <Setter Property="FontSize"        Value="13"/>
+            <Setter Property="Padding"         Value="18,8"/>
+            <Setter Property="Cursor"          Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="5" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#A00D23"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="False">
+                                <Setter Property="Opacity" Value="0.4"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="OutlineBtn" TargetType="Button">
+            <Setter Property="Background"      Value="#FFFFFF"/>
+            <Setter Property="Foreground"      Value="#C8102E"/>
+            <Setter Property="BorderBrush"     Value="#C8102E"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="FontFamily"      Value="Segoe UI Semibold"/>
+            <Setter Property="FontSize"        Value="13"/>
+            <Setter Property="Padding"         Value="18,8"/>
+            <Setter Property="Cursor"          Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                CornerRadius="5" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#FFF1F2"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="DangerBtn" TargetType="Button">
+            <Setter Property="Background"      Value="#DC2626"/>
+            <Setter Property="Foreground"      Value="#FFFFFF"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontFamily"      Value="Segoe UI Semibold"/>
+            <Setter Property="FontSize"        Value="13"/>
+            <Setter Property="Padding"         Value="18,8"/>
+            <Setter Property="Cursor"          Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                CornerRadius="5" Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center"
+                                              VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#B91C1C"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="SectionLabel" TargetType="TextBlock">
+            <Setter Property="FontSize"   Value="11"/>
+            <Setter Property="Foreground" Value="#6B7280"/>
+            <Setter Property="FontFamily" Value="Segoe UI Semibold"/>
+            <Setter Property="Margin"     Value="0,0,0,4"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="56"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <Border Grid.Row="0" Background="#FFFFFF"
+                BorderThickness="0,0,0,1" BorderBrush="#E5E7EB">
+            <Grid Margin="20,0">
+                <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                    <Border Width="4" Height="32" Background="#C8102E"
+                            CornerRadius="2" Margin="0,0,10,0"/>
+                    <TextBlock Text="ST Engineering" FontSize="14" FontWeight="Bold"
+                               Foreground="#C8102E" FontFamily="Segoe UI Black"
+                               VerticalAlignment="Center"/>
+                    <TextBlock Text="  |  Admin Portal"
+                               FontSize="13" Foreground="#6B7280" VerticalAlignment="Center"/>
+                </StackPanel>
+                <Button Content="Close"
+                        Style="{StaticResource OutlineBtn}"
+                        HorizontalAlignment="Right" VerticalAlignment="Center"
+                        Click="BtnClose_Click"/>
+            </Grid>
+        </Border>
+
+        <!-- Tabs -->
+        <TabControl Grid.Row="1" Background="#F8F9FA" BorderThickness="0" Padding="0">
+            <TabControl.Resources>
+                <Style TargetType="TabItem">
+                    <Setter Property="FontSize"   Value="13"/>
+                    <Setter Property="FontFamily" Value="Segoe UI Semibold"/>
+                    <Setter Property="Padding"    Value="18,10"/>
+                    <Setter Property="Background" Value="#F8F9FA"/>
+                    <Setter Property="Foreground" Value="#6B7280"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Foreground" Value="#C8102E"/>
+                            <Setter Property="Background" Value="#FFFFFF"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TabControl.Resources>
+            <TabItem Header="Users">
+                <Grid Margin="16">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="220"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- User list sidebar -->
+                    <Border Grid.Column="0" Background="#FFFFFF" CornerRadius="8"
+                            BorderBrush="#E5E7EB" BorderThickness="1" Margin="0,0,12,0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="0" Padding="12,10"
+                                    BorderBrush="#E5E7EB" BorderThickness="0,0,0,1">
+                                <TextBlock Text="REGISTERED USERS"
+                                           FontSize="10" FontFamily="Consolas"
+                                           Foreground="#6B7280"/>
+                            </Border>
+                            <ListBox x:Name="UserList" Grid.Row="1"
+                                     BorderThickness="0" Background="Transparent"
+                                     SelectionChanged="UserList_SelectionChanged">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Margin="4,6">
+                                            <TextBlock Text="{Binding Name}"
+                                                       FontSize="13" Foreground="#111827"
+                                                       FontFamily="Segoe UI Semibold"/>
+                                            <TextBlock Text="{Binding RackSummary}"
+                                                       FontSize="10" Foreground="#9CA3AF"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                            <Button Grid.Row="2" Content="Add New User"
+                                    Style="{StaticResource AdminBtn}"
+                                    Margin="10" Click="BtnAddUser_Click"/>
+                        </Grid>
+                    </Border>
+
+                    <!-- Edit panel -->
+                    <Border Grid.Column="1" Background="#FFFFFF" CornerRadius="8"
+                            BorderBrush="#E5E7EB" BorderThickness="1">
+                        <Grid Margin="24">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Text="EDIT USER"
+                                       FontSize="10" FontFamily="Consolas"
+                                       Foreground="#C8102E" Margin="0,0,0,18"/>
+
+                            <!-- Full name -->
+                            <StackPanel Grid.Row="1" Margin="0,0,0,14">
+                                <TextBlock Text="FULL NAME" Style="{StaticResource SectionLabel}"/>
+                                <TextBox x:Name="TxtUserName"
+                                         Style="{StaticResource WatermarkBox}"
+                                         Tag="e.g. John Smith"/>
+                            </StackPanel>
+
+                            <!-- Last 4 NRIC -->
+                            <StackPanel Grid.Row="2" Margin="0,0,0,14">
+                                <TextBlock Text="LAST 4 NRIC  (e.g. 123A)"
+                                           Style="{StaticResource SectionLabel}"/>
+                                <TextBox x:Name="TxtLastFourNric"
+                                         Style="{StaticResource WatermarkBox}"
+                                         Tag="e.g. 022F"
+                                         MaxLength="4"
+                                         CharacterCasing="Upper"/>
+                            </StackPanel>
+
+                            <!-- Allowed racks -->
+                            <StackPanel Grid.Row="3" Margin="0,0,0,8">
+                                <TextBlock Text="ALLOWED RACKS"
+                                           Style="{StaticResource SectionLabel}"/>
+                                <Border BorderBrush="#E5E7EB" BorderThickness="1"
+                                        CornerRadius="4" Height="140">
+                                    <ListBox x:Name="RackCheckList"
+                                             BorderThickness="0" Background="Transparent"
+                                             ScrollViewer.VerticalScrollBarVisibility="Auto">
+                                        <ListBox.ItemTemplate>
+                                            <DataTemplate>
+                                                <CheckBox Content="{Binding Label}"
+                                                          IsChecked="{Binding IsChecked, Mode=TwoWay}"
+                                                          Margin="4,3" FontSize="12"
+                                                          Foreground="#111827"/>
+                                            </DataTemplate>
+                                        </ListBox.ItemTemplate>
+                                    </ListBox>
+                                </Border>
+                            </StackPanel>
+
+                            
+                            <Border Grid.Row="4" Background="#F8F9FA" CornerRadius="6"
+                                    BorderBrush="#E5E7EB" BorderThickness="1"
+                                    Padding="12,9" VerticalAlignment="Top">
+                                <TextBlock Text="Tick the racks above to grant this user access."
+                                           FontSize="11" Foreground="#9CA3AF"
+                                           FontFamily="Segoe UI" FontStyle="Italic"/>
+                            </Border>
+
+                            
+                            <StackPanel Grid.Row="5" Orientation="Horizontal"
+                                        HorizontalAlignment="Right" Margin="0,16,0,0">
+                                <Button Content="Delete" Style="{StaticResource DangerBtn}"
+                                        Margin="0,0,8,0" Click="BtnDeleteUser_Click"/>
+                                <Button Content="Save Changes"
+                                        Style="{StaticResource AdminBtn}"
+                                        Click="BtnSaveUser_Click"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </TabItem>
+
+            <TabItem Header="Escort Photos">
+                <Grid Margin="16">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Border Grid.Row="0" Background="#FFF1F2" CornerRadius="8"
+                            BorderBrush="#FCA5A5" BorderThickness="1"
+                            Padding="16,12" Margin="0,0,0,12">
+                        <StackPanel>
+                            <TextBlock Text="HOW IT WORKS" FontSize="10" FontFamily="Consolas"
+                                       Foreground="#C8102E" Margin="0,0,0,4"/>
+                            <TextBlock FontSize="12" Foreground="#374151" TextWrapping="Wrap"
+                                       Text="Upload a clear face photo per escort. The filename becomes the recognised name — e.g. 'john_smith.jpg' → 'John Smith'."/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Grid.Row="1" Background="#FFFFFF" CornerRadius="8"
+                            BorderBrush="#E5E7EB" BorderThickness="1"
+                            Padding="16,14" Margin="0,0,0,12">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0" Margin="0,0,12,0">
+                                <TextBlock Text="PERSON NAME  (becomes the recognised name)"
+                                           Style="{StaticResource SectionLabel}"/>
+                                <TextBox x:Name="TxtEscortName"
+                                         Style="{StaticResource WatermarkBox}"
+                                         Tag="e.g. John Smith"/>
+                            </StackPanel>
+                            <Button Grid.Column="1" Content="Choose Photo…"
+                                    Style="{StaticResource OutlineBtn}"
+                                    VerticalAlignment="Bottom" Margin="0,0,8,0"
+                                    Click="BtnUploadEscortPhoto_Click"/>
+                            <Button Grid.Column="2" Content="Upload &amp; Enrol"
+                                    Style="{StaticResource AdminBtn}"
+                                    VerticalAlignment="Bottom"
+                                    Click="BtnEnrolEscort_Click"/>
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Row="2" Background="#FFFFFF" CornerRadius="8"
+                            BorderBrush="#E5E7EB" BorderThickness="1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="0" Padding="16,12"
+                                    BorderBrush="#E5E7EB" BorderThickness="0,0,0,1">
+                                <Grid>
+                                    <TextBlock Text="ENROLLED ESCORTS"
+                                               FontSize="10" FontFamily="Consolas"
+                                               Foreground="#6B7280" VerticalAlignment="Center"/>
+                                    <Button Content="↺  Refresh" Style="{StaticResource OutlineBtn}"
+                                            Padding="10,4" HorizontalAlignment="Right"
+                                            Click="BtnRefreshEscorts_Click"/>
+                                </Grid>
+                            </Border>
+                            <ListBox x:Name="EscortPhotoList" Grid.Row="1"
+                                     BorderThickness="0" Background="Transparent" Margin="8">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border Margin="4" Padding="10,8"
+                                                Background="#F8F9FA" CornerRadius="6"
+                                                BorderBrush="#E5E7EB" BorderThickness="1">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <StackPanel Grid.Column="0">
+                                                    <TextBlock Text="{Binding DisplayName}"
+                                                               FontSize="13" Foreground="#111827"
+                                                               FontFamily="Segoe UI Semibold"/>
+                                                    <TextBlock Text="{Binding FileName}"
+                                                               FontSize="10" Foreground="#9CA3AF"
+                                                               FontFamily="Consolas"/>
+                                                </StackPanel>
+                                                <Button Grid.Column="1" Content="🗑"
+                                                        Tag="{Binding FileName}"
+                                                        Style="{StaticResource DangerBtn}"
+                                                        Padding="10,6"
+                                                        Click="BtnDeleteEscortPhoto_Click"/>
+                                            </Grid>
+                                        </Border>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </TabItem>
+
+            <!-- ══ USER PHOTOS ════════════════════════════════════════════════ -->
+            <TabItem Header="User Photos">
+                <Grid Margin="16">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Border Grid.Row="0" Background="#F0F9FF" CornerRadius="8"
+                            BorderBrush="#BAE6FD" BorderThickness="1"
+                            Padding="16,12" Margin="0,0,0,12">
+                        <StackPanel>
+                            <TextBlock Text="HOW IT WORKS" FontSize="10" FontFamily="Consolas"
+                                       Foreground="#0369A1" Margin="0,0,0,4"/>
+                            <TextBlock FontSize="12" Foreground="#374151" TextWrapping="Wrap"
+                                       Text="Upload a clear face photo per authorised user. The filename must match their name in the Users tab exactly."/>
+                        </StackPanel>
+                    </Border>
+
+                    <Border Grid.Row="1" Background="#FFFFFF" CornerRadius="8"
+                            BorderBrush="#E5E7EB" BorderThickness="1"
+                            Padding="16,14" Margin="0,0,0,12">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Grid.Column="0" Margin="0,0,12,0">
+                                <TextBlock Text="SELECT USER  (add user in Users tab first)"
+                                           Style="{StaticResource SectionLabel}"/>
+                                <ComboBox x:Name="CmbUserPhotoSelect"
+                                          FontSize="13" Padding="8,6"
+                                          BorderBrush="#E5E7EB"
+                                          Background="#FFFFFF"/>
+                            </StackPanel>
+                            <Button Grid.Column="1" Content="Choose Photo…"
+                                    Style="{StaticResource OutlineBtn}"
+                                    VerticalAlignment="Bottom" Margin="0,0,8,0"
+                                    Click="BtnUploadUserPhoto_Click"/>
+                            <Button Grid.Column="2" Content="Upload &amp; Enrol"
+                                    Style="{StaticResource AdminBtn}"
+                                    VerticalAlignment="Bottom"
+                                    Click="BtnEnrolUser_Click"/>
+                        </Grid>
+                    </Border>
+
+                    <Border Grid.Row="2" Background="#FFFFFF" CornerRadius="8"
+                            BorderBrush="#E5E7EB" BorderThickness="1">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="0" Padding="16,12"
+                                    BorderBrush="#E5E7EB" BorderThickness="0,0,0,1">
+                                <Grid>
+                                    <TextBlock Text="ENROLLED USERS"
+                                               FontSize="10" FontFamily="Consolas"
+                                               Foreground="#6B7280" VerticalAlignment="Center"/>
+                                    <Button Content="↺  Refresh" Style="{StaticResource OutlineBtn}"
+                                            Padding="10,4" HorizontalAlignment="Right"
+                                            Click="BtnRefreshUsers_Click"/>
+                                </Grid>
+                            </Border>
+                            <ListBox x:Name="UserPhotoList" Grid.Row="1"
+                                     BorderThickness="0" Background="Transparent" Margin="8">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Border Margin="4" Padding="10,8"
+                                                Background="#F8F9FA" CornerRadius="6"
+                                                BorderBrush="#E5E7EB" BorderThickness="1">
+                                            <Grid>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"/>
+                                                    <ColumnDefinition Width="Auto"/>
+                                                </Grid.ColumnDefinitions>
+                                                <StackPanel Grid.Column="0">
+                                                    <TextBlock Text="{Binding DisplayName}"
+                                                               FontSize="13" Foreground="#111827"
+                                                               FontFamily="Segoe UI Semibold"/>
+                                                    <TextBlock Text="{Binding FileName}"
+                                                               FontSize="10" Foreground="#9CA3AF"
+                                                               FontFamily="Consolas"/>
+                                                </StackPanel>
+                                                <Button Grid.Column="1" Content="🗑"
+                                                        Tag="{Binding FileName}"
+                                                        Style="{StaticResource DangerBtn}"
+                                                        Padding="10,6"
+                                                        Click="BtnDeleteUserPhoto_Click"/>
+                                            </Grid>
+                                        </Border>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </TabItem>
+
+            <!-- ══ ACTIVITY LOG ════════════════════════════════════════════════ -->
+            <!--
+                Shows all actions taken: code generations from the kiosk and
+                admin changes (user add/edit/delete, photo enrol/delete).
+                Newest entry is at the top.
+            -->
+            <TabItem Header="Activity Log">
+                <Grid Margin="16">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Info banner -->
+                    <Border Grid.Row="0" Background="#F0F9FF" CornerRadius="8"
+                            BorderBrush="#BAE6FD" BorderThickness="1"
+                            Padding="16,12" Margin="0,0,0,12">
+                        <Grid>
+                            <StackPanel>
+                                <TextBlock Text="ACTIVITY LOG" FontSize="10" FontFamily="Consolas"
+                                           Foreground="#0369A1" Margin="0,0,0,4"/>
+                                <TextBlock FontSize="12" Foreground="#374151" TextWrapping="Wrap"
+                                           Text="Records every code generation and admin portal change. Newest entries appear first. Up to 1 000 entries are retained."/>
+                            </StackPanel>
+                            <Button Content="↺  Refresh" Style="{StaticResource OutlineBtn}"
+                                    HorizontalAlignment="Right" VerticalAlignment="Center"
+                                    Padding="12,6" Click="BtnRefreshLog_Click"/>
+                        </Grid>
+                    </Border>
+
+                    <!-- Log table -->
+                    <Border Grid.Row="1" Background="#FFFFFF" CornerRadius="8"
+                            BorderBrush="#E5E7EB" BorderThickness="1">
+                        <DataGrid x:Name="ActivityLogGrid"
+                                  AutoGenerateColumns="False"
+                                  IsReadOnly="True"
+                                  CanUserAddRows="False"
+                                  GridLinesVisibility="Horizontal"
+                                  HeadersVisibility="Column"
+                                  Background="Transparent"
+                                  BorderThickness="0"
+                                  RowBackground="Transparent"
+                                  AlternatingRowBackground="#F8F9FA"
+                                  FontSize="12"
+                                  Margin="2">
+                            <DataGrid.Columns>
+                                <!-- Timestamp column -->
+                                <DataGridTextColumn Header="Date / Time"
+                                                    Binding="{Binding Timestamp}"
+                                                    Width="160"
+                                                    FontFamily="Consolas"/>
+                                <!-- Category badge column -->
+                                <DataGridTextColumn Header="Category"
+                                                    Binding="{Binding Category}"
+                                                    Width="140"/>
+                                <!-- Message column — takes remaining space -->
+                                <DataGridTextColumn Header="Event"
+                                                    Binding="{Binding Message}"
+                                                    Width="*"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Border>
+                </Grid>
+            </TabItem>
+
+
+            <!-- ══ RACKS ══════════════════════════════════════════════════════ -->
+            <!--
+                Admins can add, edit and delete racks here.
+                Changes are saved to data/racks.json immediately.
+                No source code changes needed.
+            -->
+            <TabItem Header="Racks">
+                <Grid Margin="16">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="260"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Rack list sidebar -->
+                    <Border Grid.Column="0" Background="#FFFFFF" CornerRadius="8"
+                            BorderBrush="#E5E7EB" BorderThickness="1" Margin="0,0,12,0">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Border Grid.Row="0" Padding="12,10"
+                                    BorderBrush="#E5E7EB" BorderThickness="0,0,0,1">
+                                <TextBlock Text="CONFIGURED RACKS"
+                                           FontSize="10" FontFamily="Consolas"
+                                           Foreground="#6B7280"/>
+                            </Border>
+                            <ListBox x:Name="RackList" Grid.Row="1"
+                                     BorderThickness="0" Background="Transparent"
+                                     SelectionChanged="RackList_SelectionChanged">
+                                <ListBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Margin="4,6">
+                                            <TextBlock Text="{Binding Tag}"
+                                                       FontSize="13" Foreground="#C8102E"
+                                                       FontFamily="Consolas" FontWeight="Bold"/>
+                                            <TextBlock Text="{Binding DisplayName}"
+                                                       FontSize="11" Foreground="#111827"/>
+                                            <TextBlock Text="{Binding LockId}"
+                                                       FontSize="10" Foreground="#9CA3AF"
+                                                       FontFamily="Consolas"/>
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ListBox.ItemTemplate>
+                            </ListBox>
+                            <Button Grid.Row="2" Content="＋  Add New Rack"
+                                    Style="{StaticResource AdminBtn}"
+                                    Margin="10" Click="BtnAddRack_Click"/>
+                        </Grid>
+                    </Border>
+
+                    <!-- Edit panel -->
+                    <Border Grid.Column="1" Background="#FFFFFF" CornerRadius="8"
+                            BorderBrush="#E5E7EB" BorderThickness="1">
+                        <Grid Margin="24">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Grid.Row="0" Text="EDIT RACK"
+                                       FontSize="10" FontFamily="Consolas"
+                                       Foreground="#C8102E" Margin="0,0,0,18"/>
+
+                            <!-- Rack Tag -->
+                            <StackPanel Grid.Row="1" Margin="0,0,0,14">
+                                <TextBlock Text="RACK TAG  (e.g. A01 — used in users.json)"
+                                           Style="{StaticResource SectionLabel}"/>
+                                <TextBox x:Name="TxtRackTag"
+                                         Style="{StaticResource WatermarkBox}"
+                                         Tag="e.g. A01" CharacterCasing="Upper"/>
+                            </StackPanel>
+
+                            <!-- Lock ID -->
+                            <StackPanel Grid.Row="2" Margin="0,0,0,14">
+                                <TextBlock Text="LOCK ID  (from PYCONNECT configuration)"
+                                           Style="{StaticResource SectionLabel}"/>
+                                <TextBox x:Name="TxtRackLockId"
+                                         Style="{StaticResource WatermarkBox}"
+                                         Tag="e.g. 65-25070122"/>
+                            </StackPanel>
+
+                            <!-- Display Name -->
+                            <StackPanel Grid.Row="3" Margin="0,0,0,14">
+                                <TextBlock Text="DISPLAY NAME"
+                                           Style="{StaticResource SectionLabel}"/>
+                                <TextBox x:Name="TxtRackDisplayName"
+                                         Style="{StaticResource WatermarkBox}"
+                                         Tag="e.g. Rack A01 - ISS Rack"/>
+                            </StackPanel>
+
+                            <!-- Row / Location -->
+                            <StackPanel Grid.Row="4" Margin="0,0,0,14">
+                                <TextBlock Text="ROW / LOCATION"
+                                           Style="{StaticResource SectionLabel}"/>
+                                <TextBox x:Name="TxtRackRow"
+                                         Style="{StaticResource WatermarkBox}"
+                                         Tag="e.g. Row A"/>
+                            </StackPanel>
+
+                            <!-- Info hint -->
+                            <Border Grid.Row="5" Background="#F0F9FF" CornerRadius="6"
+                                    BorderBrush="#BAE6FD" BorderThickness="1"
+                                    Padding="12,9" VerticalAlignment="Top">
+                                <StackPanel>
+                                    <TextBlock Text="HOW IT WORKS" FontSize="10"
+                                               FontFamily="Consolas" Foreground="#0369A1"
+                                               Margin="0,0,0,4"/>
+                                    <TextBlock FontSize="11" Foreground="#374151" TextWrapping="Wrap"
+                                               Text="Racks are saved to data/racks.json. Changes take effect immediately for the Admin Portal and after a kiosk restart. The Rack Tag is what you enter when assigning racks to users."/>
+                                </StackPanel>
+                            </Border>
+
+                            <!-- Action buttons -->
+                            <StackPanel Grid.Row="6" Orientation="Horizontal"
+                                        HorizontalAlignment="Right" Margin="0,16,0,0">
+                                <Button Content="Delete" Style="{StaticResource DangerBtn}"
+                                        Margin="0,0,8,0" Click="BtnDeleteRack_Click"/>
+                                <Button Content="Save Changes"
+                                        Style="{StaticResource AdminBtn}"
+                                        Click="BtnSaveRack_Click"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </TabItem>
+
+        </TabControl>
+    </Grid>
+</Window>
