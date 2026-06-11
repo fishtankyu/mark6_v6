@@ -325,30 +325,33 @@ public partial class MainWindow : System.Windows.Window
         var selected = _racks.Where(v => v.IsSelected).Select(v => v.Rack).ToList();
         if (!selected.Any()) return;
 
-        // ── Floating-key allocation: pair each selected rack with the next ──
-        // ── physical key currently in the cabinet (not rack.LockId).        ──
-        var availableSlots = SlotService.GetAvailableKeys();
-        if (availableSlots.Count < selected.Count)
+        // ── 1-TO-MANY FLOATING KEY FIX ──
+        // 1. Check if there are ANY keys currently in the cabinet
+        var availableSlots = SlotService.GetOccupiedSlots(); 
+        if (availableSlots.Count == 0)
         {
-            ShowError(
-                $"Only {availableSlots.Count} key(s) currently in the cabinet, " +
-                $"but {selected.Count} rack(s) requested.");
+            ShowError("No keys currently in the cabinet.");
             return;
         }
 
+        // 2. Grab the FIRST available key. We will use this ONE key for ALL selected racks.
+        var slotToOpen = availableSlots.First();
+
         var assignments = selected
-            .Zip(availableSlots, (rack, slot) => (rack, slot))
+            .Select(rack => (rack, slot: slotToOpen))
             .ToList();
 
         _state = KioskState.Generating;
         StepText.Text = "Generating…";
         int total = selected.Count * _codesPerRack;
-        GeneratingMsg.Text = $"Contacting PYCONNECT for {selected.Count} key(s) × {_codesPerRack} code(s) = {total} total…";
+        
+        // Updated UI message to reflect the new logic
+        GeneratingMsg.Text = $"Contacting PYCONNECT for {selected.Count} rack(s) using 1 key × {_codesPerRack} code(s) = {total} total…";
         Show(PageGenerating);
 
         string ticket = $"Kiosk-{(_user?.Name ?? "").Replace(" ", "")}-{DateTime.Now:yyyyMMddHHmmss}";
 
-        // Generate OTPs against each ALLOCATED slot's CurrentPyKey, not rack.LockId.
+        // 3. Generate OTPs against the SINGLE slot's CurrentPyKey for all racks
         var pyKeyAssignments = assignments
             .Select(a => (a.rack, pyKey: a.slot.CurrentPyKey ?? ""))
             .ToList();
@@ -369,28 +372,28 @@ public partial class MainWindow : System.Windows.Window
         ActivityLog.CodeGenerated(_escort?.Name ?? "Unknown", _user?.Name ?? "Unknown", results);
         PrintReceipt();
 
-        // Open each allocated slot, parallel to results
-        for (int i = 0; i < results.Count; i++)
+        // 4. Check if ANY code generation succeeded before opening the door
+        if (results.Any(r => r.Success))
         {
-            if (!results[i].Success) continue;
-            var slot = assignments[i].slot;
-
-            bool opened = await _locker.UnlockSlotAsync(slot.SlotNumber);
+            // Open ONLY the single allocated slot
+            bool opened = await _locker.UnlockSlotAsync(slotToOpen.SlotNumber);
             if (opened)
             {
-                SlotService.ClearSlot(slot.SlotNumber);
+                SlotService.ClearSlot(slotToOpen.SlotNumber);
+                
+                // Log the single key drawn for multiple racks
+                string successRacks = string.Join(", ", results.Where(r => r.Success).Select(r => r.Rack.Tag));
                 ActivityLog.KeyDrawn(
                     escort:     _escort?.Name ?? "Unknown",
                     user:       _user?.Name ?? "Unknown",
-                    rackTag:    results[i].Rack.Tag,
-                    pyKey:      slot.CurrentPyKey ?? "",
-                    slotNumber: slot.SlotNumber);
+                    rackTag:    successRacks, 
+                    pyKey:      slotToOpen.CurrentPyKey ?? "",
+                    slotNumber: slotToOpen.SlotNumber);
             }
         }
 
         ShowCodes(results);
     }
-
 
     private void ShowCodes(List<OtcResult> results)
     {

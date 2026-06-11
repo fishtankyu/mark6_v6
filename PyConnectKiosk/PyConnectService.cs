@@ -77,7 +77,7 @@ public static class PyConnectService
     /// Used by the "floating key" draw flow where the dispensed key is decided
     /// at draw-time from whatever physical key is currently in the cabinet,
     /// not from rack.LockId. The OtcResult still references the rack the user
-    /// selected (for receipts &amp; UI), but the OTP is bound to the supplied pyKey.
+    /// selected (for receipts & UI), but the OTP is bound to the supplied pyKey.
     /// </summary>
     public static async Task<List<OtcResult>> GenerateForAssignmentsAsync(
         List<(RackItem rack, string pyKey)> assignments, string ticket, int codesPerRack = 1)
@@ -95,7 +95,8 @@ public static class PyConnectService
             {
                 try
                 {
-                    string code = await RequestOtcAsync(reqId++, ticket, pyKey);
+                    // FIXED: Now passing both rack.LockId and the specific pyKey
+                    string code = await RequestOtcAsync(reqId++, ticket, rack.LockId, pyKey);
                     codes.Add(code);
                 }
                 catch (Exception ex)
@@ -121,10 +122,12 @@ public static class PyConnectService
         return results;
     }
 
+    // FIXED: Added optional customPyKey parameter
     private static async Task<string> RequestOtcAsync(
-        int reqId, string ticket, string lockId)
+        int reqId, string ticket, string lockId, string? customPyKey = null)
     {
-        string pykey = NextPyKey();
+        // Use customPyKey if provided, otherwise pull from the configuration pool
+        string pykey = customPyKey ?? NextPyKey();
         string reqTime = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
 
         string contents = $"{reqId}{reqTime}{ticket}{pykey}{lockId}";

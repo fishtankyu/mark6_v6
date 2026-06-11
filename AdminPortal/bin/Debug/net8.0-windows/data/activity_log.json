@@ -1,0 +1,17 @@
+[
+  {
+    "Timestamp": "2026-06-10 15:22:57",
+    "Category": "AdminAction",
+    "Message": "Added user \u0027Zeng Yu\u0027 NRIC:023C | Racks: A01, A02"
+  },
+  {
+    "Timestamp": "2026-06-10 15:22:46",
+    "Category": "AdminAction",
+    "Message": "Enrolled escort photo: \u0027Zeng Yu\u0027"
+  },
+  {
+    "Timestamp": "2026-06-10 15:23:08",
+    "Category": "AdminAction",
+    "Message": "Enrolled user photo: \u0027Zeng Yu\u0027"
+  }
+]

@@ -477,3 +477,4 @@ C:\Users\ISS_Laptop_5\Downloads\mark6_v6\AdminPortal\obj\Release\net8.0-windows\
 C:\Users\ISS_Laptop_5\Downloads\mark6_v6\AdminPortal\obj\Release\net8.0-windows\win-x64\AdminPortal.pdb
 C:\Users\ISS_Laptop_5\Downloads\mark6_v6\AdminPortal\obj\Release\net8.0-windows\win-x64\AdminPortal.genruntimeconfig.cache
 C:\Users\ISS_Laptop_5\Downloads\mark6_v6\AdminPortal\obj\Release\net8.0-windows\win-x64\ref\AdminPortal.dll
+C:\Users\ISS_Laptop_5\Downloads\mark6_v6\AdminPortal\obj\Release\net8.0-windows\win-x64\AdminPortal.sourcelink.json

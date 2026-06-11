@@ -494,3 +494,4 @@ C:\Users\ISS_Laptop_5\Downloads\mark6_v6\PyConnectKiosk\obj\Release\net8.0-windo
 C:\Users\ISS_Laptop_5\Downloads\mark6_v6\PyConnectKiosk\obj\Release\net8.0-windows\win-x64\PyConnectKiosk.pdb
 C:\Users\ISS_Laptop_5\Downloads\mark6_v6\PyConnectKiosk\obj\Release\net8.0-windows\win-x64\PyConnectKiosk.genruntimeconfig.cache
 C:\Users\ISS_Laptop_5\Downloads\mark6_v6\PyConnectKiosk\obj\Release\net8.0-windows\win-x64\ref\PyConnectKiosk.dll
+C:\Users\ISS_Laptop_5\Downloads\mark6_v6\PyConnectKiosk\obj\Release\net8.0-windows\win-x64\PyConnectKiosk.sourcelink.json
