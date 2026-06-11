@@ -7,8 +7,14 @@
   },
   {
     "Tag": "A02",
-    "LockId": "65-25110187",
-    "DisplayName": "Rack A02 - Test Rack",
+    "LockId": "65-25060102",
+    "DisplayName": "Rack A02 - SwingHandle Outside",
     "Row": "Row B"
+  },
+  {
+    "Tag": "A03",
+    "LockId": "65-25060103",
+    "DisplayName": "PadLock",
+    "Row": ""
   }
 ]
