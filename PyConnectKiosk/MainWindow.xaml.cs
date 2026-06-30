@@ -290,9 +290,25 @@ public partial class MainWindow : System.Windows.Window
 
         // Branch based on session mode
         if (_mode == SessionMode.Draw)
+        {
+            // ── NEW CHECK: Prevent multiple draws ──
+            var held = ActivityLog.GetHeldKey(_user.Name);
+            if (held != null)
+            {
+                // Try to get the friendly display name, fallback to the tag if not found
+                var rack = RackService.ByTag(held.Value.RackTag);
+                string rackName = rack?.DisplayName ?? held.Value.RackTag;
+
+                ShowError($"{_user.Name} already holds a key for {rackName}.\n\nPlease return it before drawing a new one.");
+                return;
+            }
+
             GoRackSelect();
+        }
         else
+        {
             GoReturnConfirm();
+        }
     }
 
     // ═════════════════════════════════════════════════════════════════════════

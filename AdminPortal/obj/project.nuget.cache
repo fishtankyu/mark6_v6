@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uSjrGvabN3E=",
+  "dgSpecHash": "OCfjk28/+Mw=",
   "success": true,
   "projectFilePath": "C:\\Users\\ISS_Laptop_5\\Downloads\\mark6_v6\\AdminPortal\\AdminPortal.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\ISS_Laptop_5\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\8.0.21\\microsoft.netcore.app.runtime.win-x64.8.0.21.nupkg.sha512",
-    "C:\\Users\\ISS_Laptop_5\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\8.0.21\\microsoft.windowsdesktop.app.runtime.win-x64.8.0.21.nupkg.sha512",
-    "C:\\Users\\ISS_Laptop_5\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\8.0.21\\microsoft.aspnetcore.app.runtime.win-x64.8.0.21.nupkg.sha512"
-  ],
+  "expectedPackageFiles": [],
   "logs": []
 }

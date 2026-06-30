@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PyConnectKiosk")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a4163d6410bc1f95161ae763c62837a59b4ca32")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3c8220d4c6f37286317c4b0e441457066bb9a23a")]
 [assembly: System.Reflection.AssemblyProductAttribute("PyConnectKiosk")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PyConnectKiosk")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
